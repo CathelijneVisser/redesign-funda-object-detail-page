@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	scroll-behavior: smooth;
+}
+
+:root {
+    --orange: #F7A100;
+}
+
+body {
+    line-height: 1.5;
+  
+}
+
+header {
+    background-color: var(--orange);
+    height: 3.75em;
+    padding: 1rem;
+}
+img {
+  height: 3.75em;
+  width: auto;
+}
+
+hr {
+    width: 90%;
+    color: grey;
+    margin: .5rem auto;
+}
+
+.menu-button {
+  width: 1em;
+}
+
+.span-container {
+  margin-left: auto;
+}
+
+span {
+  height: 2px;
+  width: 1rem;
+  display: block;
+  margin-bottom: 5px;
+  background-color: white;
+}
+
+.menu-button p{
+  color: white;
+}
