@@ -9,31 +9,111 @@
 }
 
 body {
-    line-height: 1.5;
-  
+  line-height: 1.5;  
+}
+
+main {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 header {
     background-color: var(--orange);
     height: 3.75em;
     padding: 1rem;
+    display: flex;
 }
+
+.menu-button{
+  display: block;
+}
+
 img {
   height: 3.75em;
   width: auto;
+  display: block;
 }
 
 hr {
-    width: 90%;
     color: grey;
-    margin: .5rem auto;
+    margin: auto;
 }
 
 .menu-button {
   max-width: 1em;
 }
 
+.svg-menu {
+  height: 3rem;
+
+}
+
 .menu-button p{
   color: white;
 }
 
+section ~ section {
+  margin-top: 2rem;
+}
+
+section.carrousel {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.car-picture {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  scroll-snap-align: center;
+ }
+
+ .car-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+ }
+
+.more-description{
+  color: white;
+  background-color: var(--orange); 
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  /* position: absolute; */
+}
+
+.more-description.expanded {
+  visibility: hidden;
+}
+
+.less {
+  visibility: hidden;
+  /* position: relative;
+  top: 0;
+  right: 0; */
+}
+
+.less.expanded {
+  visibility: visible;
+}
+
+
+.more-info-description{
+display: none;
+}
+
+.more-info-description.fold-out {
+  display: block;
+}
+
+.title{
+  font-weight: bold;
+}
+
+ hr ~ .title {
+  margin-top: 1.5rem;
+}

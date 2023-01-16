@@ -1,26 +1,12 @@
-var slidePosition = 1;
-SlideShow(slidePosition);
+const DescriptionButton = document.querySelector(".more-description")
+const DescriptionButtonLess = document.querySelector(".less")
+const Description = document.querySelectorAll(".more-info-description")
 
-function plusSlides(n) {
-  SlideShow(slidePosition += n);
+DescriptionButton.addEventListener("click", DescriptionExpand)
+DescriptionButtonLess.addEventListener("click", DescriptionExpand)
+
+function DescriptionExpand () {
+    Description.forEach.classList.toggle("fold-out")
+    DescriptionButton.classList.toggle("expanded")
+    DescriptionButtonLess.classList.toggle("expanded")
 }
-
-function currentSlide(n) {
-  SlideShow(slidePosition = n);
-}
-
-function SlideShow(n) {
-  var i;
-  var slides = document.getElementsByClassName("Containers");
-  var circles = document.getElementsByClassName("dots");
-  if (n > slides.length) {slidePosition = 1}
-  if (n < 1) {slidePosition = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < circles.length; i++) {
-      circles[i].className = circles[i].className.replace(" enable", "");
-  }
-  slides[slidePosition-1].style.display = "block";
-  circles[slidePosition-1].className += " enable";
-} 
