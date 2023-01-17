@@ -16,6 +16,10 @@ main {
   margin-left: 5%;
   margin-right: 5%;
 }
+/*************************************************************************************
+header 
+**************************************************************************************/
+
 
 header {
     background-color: var(--orange);
@@ -52,11 +56,11 @@ hr {
   color: white;
 }
 
-section ~ section {
-  margin-top: 2rem;
-}
+/*************************************************************************************
+Picture 
+**************************************************************************************/
 
-section.carrousel {
+div.carrousel {
   display: flex;
   flex-direction: row;
   overflow: auto;
@@ -69,13 +73,95 @@ section.carrousel {
   flex-basis: 100%;
   scroll-snap-align: center;
  }
-
+ 
  .car-img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+   width: 100%;
+   height: auto;
+   aspect-ratio: 16 / 9;
+   object-fit: cover;
+  }
+  
+  /*************************************************************************************
+  Intro
+  **************************************************************************************/
+
+ 
+  .intro h1{
+    font-size: xx-large;
+  }
+
+  .intro p, a {
+    font-size: large;
+  }
+
+  .container-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon-containers{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contact-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
  }
+
+ .call {
+  width: 43%;
+  border: none;
+  color: white;
+  background-color: var(--orange);
+  height: 2rem;
+ }
+
+ .email {
+  width: 43%;
+  border: solid var(--orange) 2px;
+  height: 2rem;
+  color: var(--orange);
+  background-color: white;
+ }
+
+ section ~ section {
+  margin: 1rem 0;
+}
+
+/*************************************************************************************
+Activity 
+**************************************************************************************/
+
+div.activity {
+  margin-top: 1rem;
+  display: flex;
+}
+.act-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.saved{
+  border-left: solid gray 1px;
+  border-right: solid gray 1px;
+}
+/*************************************************************************************
+Descritption 
+**************************************************************************************/
+
+.description p{
+  font-size: larger;
+}
 
 .more-description{
   color: white;
@@ -110,10 +196,104 @@ display: none;
   display: block;
 }
 
+/*************************************************************************************
+Characteristics 
+**************************************************************************************/
+.characteristics dd, dt {
+  font-size: larger;
+}
+
 .title{
   font-weight: bold;
 }
 
  hr ~ .title {
   margin-top: 1.5rem;
+}
+
+/*************************************************************************************
+Neighborhood
+**************************************************************************************/
+
+.neighborhood ul {
+  border: solid gray 1px;
+  box-shadow:  5px 5px 21px 0px rgba(115,110,115,0.5);;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.neighborhood li {
+list-style-type: none;
+width: 100%;
+padding-left: 10%;
+}
+.neighborhood hr {
+  width: 90%;
+}
+
+.neighborhood li:first-child {
+  display: flex;
+  margin: .5rem;
+  border-bottom: solid gray 1px;
+}
+
+.neighborhood p {
+  margin: 0 1rem;
+}
+
+.neighborhood img {
+  margin: .5rem 0;
+  border-radius: .25rem;
+}
+
+/*************************************************************************************
+realator
+**************************************************************************************/
+
+.realator {
+  border: solid 1px gray;
+}
+
+.realator a:first-child {
+  font-size: xx-large;
+}
+
+.realator a, p {
+  font-size: larger;
+  text-decoration: none;
+}
+
+.call-info {
+  display: flex;
+}
+
+.realator svg {
+  margin: 1rem;
+}
+
+
+/*************************************************************************************
+Footer
+**************************************************************************************/
+
+footer {
+  background-color: #EDEDED;
+  width: 100vw;
+  font-size: larger;
+  
+}
+
+footer li {
+  list-style-type: none;
+  display: none;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.footer-icon-container {
+  display: flex;
 }
