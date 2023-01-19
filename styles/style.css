@@ -13,9 +13,9 @@ body {
 	line-height: 1.5;
 }
 
-main :not(footer) {
-	margin-left: 5%;
-	margin-right: 5%;
+section + section {
+	padding-left: 5%;
+	padding-right: 5%;
 }
 /*************************************************************************************
 header 
@@ -26,10 +26,11 @@ header {
 	height: 3.75em;
 	padding: 1rem;
 	display: flex;
+	margin: 0;
+	width: 100vw;
 }
 
 .menu-button {
-	display: block;
 }
 
 img {
@@ -102,6 +103,7 @@ a {
 .icons {
 	display: flex;
 	flex-direction: column;
+	min-width: 90px;
 }
 
 .icon-containers {
@@ -163,7 +165,8 @@ Descritption
 }
 
 .more-description,
-.more-characteristics {
+.more-characteristics,
+.less-characteristics {
 	color: white;
 	background-color: var(--orange);
 	border: none;
@@ -172,17 +175,15 @@ Descritption
 	/* position: absolute; */
 }
 
-.more-description.expanded,
-.more-characteristics.less.expanded {
+.more-description.expanded {
 	display: none;
 }
 
-.less,
-.less-characteristics {
+.less {
 	display: none;
 }
 
-.less.expanded. .less-characteristics.expanded {
+.less.expanded. {
 	display: block;
 }
 
@@ -201,14 +202,41 @@ Characteristics
 .characteristics dd,
 dt {
 	font-size: larger;
+	padding: 0;
+}
+
+dl {
+	padding: 0;
 }
 
 .title {
 	font-weight: bold;
 }
 
-hr ~ .title {
+hr ~ .title,
+.opp {
 	margin-top: 1.5rem;
+}
+
+.more-info-characteristics {
+	display: none;
+	padding: 0;
+}
+
+.more-info-characteristics.fold-out {
+	display: block;
+}
+
+.more-characteristics.expanded {
+	display: none;
+}
+
+.less-characteristics {
+	display: none;
+}
+
+.less-characteristics.expanded {
+	display: block;
 }
 
 /*************************************************************************************
@@ -283,6 +311,7 @@ footer {
 	background-color: #ededed;
 	width: 100vw;
 	font-size: larger;
+	margin: 0;
 }
 
 footer li {
@@ -298,4 +327,6 @@ footer a {
 	display: flex;
 }
 
-.footer-icon-container.expand +;
+svg {
+	display: block;
+}

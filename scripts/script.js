@@ -10,7 +10,7 @@ const CharacteristicsButton = document.querySelector(".more-characteristics");
 const CharacteristicsButtonLess = document.querySelector(
 	".less-characteristics"
 );
-const characteristics = document.querySelector(".characteristics");
+const characteristics = document.querySelector(".more-info-characteristics");
 
 DescriptionButton.addEventListener("click", DescriptionExpand);
 DescriptionButtonLess.addEventListener("click", DescriptionExpand);
@@ -26,10 +26,8 @@ function DescriptionExpand() {
 }
 
 function CharacteristicsExpand() {
-	Characteristics.forEach((Characteristics) => {
-		Characteristics.classList.toggle("fold-out");
-	});
-	Characteristics.classList.toggle("expanded");
+	characteristics.classList.toggle("fold-out")
+	CharacteristicsButton.classList.toggle("expanded");
 	CharacteristicsButtonLess.classList.toggle("expanded");
 }
 
