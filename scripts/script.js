@@ -34,5 +34,6 @@ function CharacteristicsExpand() {
 FooterSVG.forEach((svg) => {
 	svg.addEventListener("click", () => {
 		svg.parentElement.classList.toggle("expand");
+		svg.classList.toggle("turned")
 	});
 });

@@ -24,7 +24,7 @@ header
 header {
 	background-color: var(--orange);
 	height: 3.75em;
-	padding: 1rem;
+	padding-left: 1rem;
 	display: flex;
 	margin: 0;
 	width: 100vw;
@@ -49,7 +49,7 @@ hr {
 }
 
 .svg-menu {
-	height: 3rem;
+	height: 2.5rem;
 }
 
 .menu-button p {
@@ -90,6 +90,7 @@ div.carrousel {
 }
 
 .intro p,
+.intro dt,
 a {
 	font-size: large;
 }
@@ -329,4 +330,15 @@ footer a {
 
 svg {
 	display: block;
+}
+
+svg.turned {
+	animation: turning 3s;
+	animation-fill-mode: both;
+}
+
+@keyframes turning {
+	to {
+		transform: rotate(-180deg);
+	}
 }
