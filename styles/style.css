@@ -183,7 +183,7 @@ Descritption
 	display: none;
 }
 
-.less.expanded. {
+.less.expanded {
 	display: block;
 }
 
@@ -214,7 +214,7 @@ dl {
 }
 
 hr ~ .title,
-.opp {
+.bouw {
 	margin-top: 1.5rem;
 }
 
