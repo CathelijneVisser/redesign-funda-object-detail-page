@@ -81,11 +81,6 @@ img {
 	display: block;
 }
 
-hr {
-	border: 0.5px solid var(--gray);
-	margin: auto;
-}
-
 .menu-button {
 	max-width: 5em;
 }
@@ -258,13 +253,14 @@ dl {
 	padding: 0;
 }
 
-.title {
-	font-weight: bold;
+dd {
+	border-bottom: 1px solid var(--gray);
 }
 
-hr ~ .title,
-.bouw {
+.title {
+	font-weight: bold;
 	margin-top: 1.5rem;
+	border-bottom: 1px solid var(--gray);
 }
 
 .more-info-characteristics {
