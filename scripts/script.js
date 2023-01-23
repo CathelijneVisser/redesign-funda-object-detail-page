@@ -1,39 +1,48 @@
-const DescriptionButton = document.querySelector(".more-description");
-const DescriptionButtonLess = document.querySelector(".less");
-const Description = document.querySelectorAll(".more-info-description");
-const FooterServices = document.querySelector(".services");
-const FooterInformation = document.querySelector(".information");
-const FooterRealetor = document.querySelector(".realetor-footer");
-const FooterAboutUs = document.querySelector(".about-us");
-const FooterSVG = document.querySelectorAll("footer svg");
-const CharacteristicsButton = document.querySelector(".more-characteristics");
-const CharacteristicsButtonLess = document.querySelector(
-	".less-characteristics"
-);
+const menuButton = document.querySelector(".menu-button");
+const nav = document.querySelector("nav")
+const descriptionButton = document.querySelector(".more-description");
+const descriptionButtonLess = document.querySelector(".less");
+const descriptions = document.querySelectorAll(".more-info-description");
+const characteristicsButton = document.querySelector(".more-characteristics");
+const characteristicsButtonLess = document.querySelector(".less-characteristics");
 const characteristics = document.querySelector(".more-info-characteristics");
+const footerFoldouts = document.querySelectorAll(".fold-out");
 
-DescriptionButton.addEventListener("click", DescriptionExpand);
-DescriptionButtonLess.addEventListener("click", DescriptionExpand);
-CharacteristicsButton.addEventListener("click", CharacteristicsExpand);
-CharacteristicsButtonLess.addEventListener("click", CharacteristicsExpand);
+menuButton.addEventListener("click", menuExpand);
+descriptionButton.addEventListener("click", descriptionExpand);
+descriptionButtonLess.addEventListener("click", descriptionExpand);
+characteristicsButton.addEventListener("click", characteristicsExpand);
+characteristicsButtonLess.addEventListener("click", characteristicsExpand);
 
-function DescriptionExpand() {
-	Description.forEach((Description) => {
-		Description.classList.toggle("fold-out");
-	});
-	DescriptionButton.classList.toggle("expanded");
-	DescriptionButtonLess.classList.toggle("expanded");
+function menuExpand () {
+	nav.classList.toggle("expanded");
 }
 
-function CharacteristicsExpand() {
+function descriptionExpand() {
+	descriptions.forEach((description) => {
+		description.classList.toggle("fold-out");
+	});
+	descriptionButton.classList.toggle("expandeda");
+	descriptionButtonLess.classList.toggle("expanded");
+}
+
+function characteristicsExpand() {
 	characteristics.classList.toggle("fold-out")
-	CharacteristicsButton.classList.toggle("expanded");
-	CharacteristicsButtonLess.classList.toggle("expanded");
+	characteristicsButton.classList.toggle("expanded");
+	characteristicsButtonLess.classList.toggle("expanded");
 }
 
-FooterSVG.forEach((svg) => {
-	svg.addEventListener("click", () => {
-		svg.parentElement.classList.toggle("expand");
-		svg.classList.toggle("turned")
-	});
-});
+// FooterSVG.forEach((svg) => {
+// 	svg.addEventListener("click", () => {
+// 		svg.parentElement.classList.toggle("expand");
+// 		svg.classList.toggle("turned")
+// 	});
+// });
+
+
+
+footerFoldouts.forEach((foldOut) => {
+	foldOut.addEventListener('click', () => {
+		foldOut.parentElement.classList.toggle('active')
+	})
+})

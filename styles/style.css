@@ -2,6 +2,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	scroll-behavior: smooth;
+	font-family: sans-serif;
 }
 
 :root {
@@ -17,6 +18,41 @@ section + section {
 	padding-left: 5%;
 	padding-right: 5%;
 }
+
+/*************************************************************************************
+nav
+**************************************************************************************/
+
+nav {
+	display: none;
+}
+
+nav.expanded {
+	transition: 2s;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.nav-menu-container {
+	display: flex;
+	padding: 5%;
+	border-bottom: var(--gray) 1px solid;
+}
+
+.nav-menu-container svg {
+	margin-right: 2%;
+	align-self: center;
+}
+
+nav a {
+	color: black;
+	text-decoration: none;
+	border-bottom: var(--gray) 1px solid;
+	width: 100%;
+	padding: 5%;
+}
+
 /*************************************************************************************
 header 
 **************************************************************************************/
@@ -25,16 +61,22 @@ header {
 	background-color: var(--orange);
 	height: 3.75em;
 	padding-left: 1rem;
+	padding-right: 1rem;
 	display: flex;
 	margin: 0;
 	width: 100vw;
+	justify-content: space-between;
+	
 }
 
 .menu-button {
+	border: none;
+	background-color: inherit;
+	color: inherit;
 }
 
 img {
-	height: 3.75em;
+	height: 4em;
 	width: auto;
 	display: block;
 }
@@ -45,7 +87,7 @@ hr {
 }
 
 .menu-button {
-	max-width: 1em;
+	max-width: 5em;
 }
 
 .svg-menu {
@@ -54,6 +96,16 @@ hr {
 
 .menu-button p {
 	color: white;
+	font-size: medium;
+}
+
+.account-icon {
+	margin-top: 1rem;
+}
+
+.menu-button-accounticon-container {
+	display: flex;
+
 }
 
 /*************************************************************************************
@@ -102,14 +154,10 @@ a {
 }
 
 .icons {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1fr 1fr 1fr;
 	min-width: 90px;
-}
-
-.icon-containers {
-	display: flex;
-	flex-direction: row;
 }
 
 .contact-buttons {
@@ -294,14 +342,16 @@ realator
 p {
 	font-size: larger;
 	text-decoration: none;
+	align-self: center;
 }
 
-.call-info {
+.call-info, .look-around, .brochure {
 	display: flex;
 }
 
 .realator svg {
 	margin: 1rem;
+	align-self: center;
 }
 
 /*************************************************************************************
@@ -317,28 +367,34 @@ footer {
 
 footer li {
 	list-style-type: none;
-	display: none;
 }
 
 footer a {
 	text-decoration: none;
 }
 
-.footer-icon-container {
-	display: flex;
+.footer-list li ul {
+	display: none;
 }
 
-svg {
+.footer-list li.active ul {
 	display: block;
 }
 
-svg.turned {
-	animation: turning 3s;
-	animation-fill-mode: both;
+.footer-list li button {
+	border: none;
+	display: flex;
+
 }
 
-@keyframes turning {
-	to {
-		transform: rotate(-180deg);
-	}
+.footer-list li button svg {
+	transition: transform 3s ease-out;
+}
+
+.footer-list li.active button svg {
+	transform: rotate(-180deg);
+}
+
+@media (min-width) {
+	
 }
