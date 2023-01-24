@@ -142,6 +142,10 @@ a {
 	font-size: large;
 }
 
+.intro dd {
+	border: none;
+}
+
 .container-intro {
 	display: flex;
 	flex-direction: row;
@@ -216,7 +220,6 @@ Descritption
 	border: none;
 	padding: 5px;
 	border-radius: 5px;
-	/* position: absolute; */
 }
 
 .more-description.expanded {
@@ -391,6 +394,30 @@ footer a {
 	transform: rotate(-180deg);
 }
 
-@media (min-width) {
+/*************************************************************************************
+media queeries
+**************************************************************************************/
+
+
+@media (min-width: 45em) {
 	
+/*Descritption*/
+
+.description p {
+	max-width: 30em;
+}
+
+/*Characteristics*/
+
+.characteristics {
+	display: grid;
+}
+
+
+
+}
+
+@media (min-width: 75em) {
+	
+
 }

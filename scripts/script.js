@@ -22,7 +22,7 @@ function descriptionExpand() {
 	descriptions.forEach((description) => {
 		description.classList.toggle("fold-out");
 	});
-	descriptionButton.classList.toggle("expandeda");
+	descriptionButton.classList.toggle("expanded");
 	descriptionButtonLess.classList.toggle("expanded");
 }
 
@@ -31,15 +31,6 @@ function characteristicsExpand() {
 	characteristicsButton.classList.toggle("expanded");
 	characteristicsButtonLess.classList.toggle("expanded");
 }
-
-// FooterSVG.forEach((svg) => {
-// 	svg.addEventListener("click", () => {
-// 		svg.parentElement.classList.toggle("expand");
-// 		svg.classList.toggle("turned")
-// 	});
-// });
-
-
 
 footerFoldouts.forEach((foldOut) => {
 	foldOut.addEventListener('click', () => {
