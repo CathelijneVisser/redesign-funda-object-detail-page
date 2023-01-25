@@ -8,7 +8,7 @@
 <img src="https://user-images.githubusercontent.com/112855711/214565657-8cf91772-04e3-4f66-92fc-01d30ab50d6c.png" alt="" width=45%>
 
 
-## opdrachtgever
+## Opdrachtgever
 Funda is een bedrijf dat koop en huurhuizen verkoopt. Een makelaar kan een huis dat zij willen verkopen op de website van Funda zetten. Op funda staan zo veel huizen waardoor mensen makkelijk huizen met elkaar kunnen vergelijken, en op belangrijke dingen kunnen filteren. Als mensen een huis hebben gevonden kunnen ze of een bezichtiging aan vragen of contact opnemen met de makelaar.
 
 ## Design challenge
