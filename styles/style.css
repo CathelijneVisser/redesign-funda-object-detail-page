@@ -472,7 +472,7 @@ media queeries
 
 
 
-@media (min-width: 75em) {
+@media (min-width: 70em) {
 	
 .neighborhood li {
 	padding-left: 1rem;
@@ -497,9 +497,20 @@ media queeries
 
 
 
-.footer-list >	 li {
-	height: 4rem;
-	background-color: orange;
+/*footer*/
+
+footer svg {
+	display: none;
 }
 
+.footer-list {
+	display: flex;
+	width: 100%;
+}
+
+.footer-list li ul {
+	display: block;
+	padding: 0;
+	width: 25%;
+}
 }
